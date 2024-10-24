@@ -24,6 +24,8 @@
             <a href="#contact" class="option-link button">Contact Us</a>
             <div class="gap"></div>
             <a href="#login" class="option-link button">Login/Sign-up</a>
+            <div class="gap"></div>
+            <a href="#articles" class="option-link button">Articles</a>
         </div>
     </div>
     <div class="slogan">
@@ -155,9 +157,9 @@
             <option value="dr-jane-doe">Dr. Jane Doe (Cardiology)</option>
             <option value="dr-john-smith">Dr. John Smith (Dermatology)</option>
             <option value="dr-emma-brown">Dr. Emma Brown (Pediatrics)</option>
-            <option value="dr-alex-white">Dr. Alex White (Orthopedics)</option>
-            <option value="dr-lisa-green">Dr. Lisa Green (General Practitioner)</option>
-            <option value="dr-mark-blue">Dr. Mark Blue (Neurology)</option>
+            <option value="dr-alex-white">Dr. Alex Martinez (Orthopedics)</option>
+            <option value="dr-lisa-green">Dr. Sarah Johnson (General Practitioner)</option>
+            <option value="dr-mark-blue">Dr. Michael Lee (Neurology)</option>
         </select>
 
         <label for="date">Select Date:</label>
@@ -169,6 +171,153 @@
         <input type="submit" value="Book Appointment">
     </form>
 </section>
+
+<!-- Articles Section -->
+<section id="articles">
+    <h2>Latest Health Articles</h2>
+    <div id="articlesContainer"></div>
+</section>
+
+<script>
+// Articles Data
+const articles = [
+    {
+        title: "The Importance of Sleep for Mental Health",
+        description: "Adequate sleep is crucial for mental and emotional well-being. Chronic sleep deprivation can lead to irritability, anxiety, and even depression. Experts recommend a consistent sleep schedule and reducing screen time before bed to promote better sleep.",
+        author: "Amola Paul",
+        date: "23.07.2023",
+        link: "https://example.com/sleep-mental-health"
+    },
+    {
+        title: "The Impact of Diet on Cardiovascular Health",
+        description: "A diet rich in fiber and omega-3 fatty acids supports heart health, while a diet high in processed foods can increase the risk of heart disease. Healthy dietary choices, along with regular exercise, are key to cardiovascular health.",
+        author: "Emy Stone",
+        date: "20.11.2020",
+        link: "https://example.com/diet-heart-health"
+    },
+    {
+        title: "Advances in Cancer Immunotherapy",
+        description: "Immunotherapy harnesses the immune system to target cancer cells. Breakthroughs in techniques like checkpoint inhibitors and CAR T-cell therapy have shown promise in treating certain cancers with improved survival rates.",
+        author: "Shane Welly",
+        date: "N/A",
+        link: "https://example.com/cancer-immunotherapy"
+    },
+    {
+        title: "The Rising Concern of Antibiotic Resistance",
+        description: "Antibiotic resistance is a global health crisis caused by overuse of antibiotics. Health experts advocate for responsible antibiotic use and investment in new treatments to address this growing threat.",
+        author: "Disha Stane",
+        date: "N/A",
+        link: "https://example.com/antibiotic-resistance"
+    },
+    {
+        title: "Diabetes and Its Long-Term Complications",
+        description: "Poorly managed diabetes can lead to complications like heart disease and kidney failure. Regular glucose monitoring, diet, exercise, and medication are key to managing diabetes and preventing serious health issues.",
+        author: "Mowli Lang",
+        date: "03.02.2024",
+        link: "https://example.com/diabetes-complications"
+    }
+];
+
+// Function to Render Articles
+function renderArticles() {
+    const articlesContainer = document.getElementById('articlesContainer');
+
+    articles.forEach(article => {
+        const articleDiv = document.createElement('div');
+        articleDiv.classList.add('article');
+
+        const title = document.createElement('h3');
+        title.textContent = article.title;
+
+        const description = document.createElement('p');
+        description.textContent = article.description;
+
+        const author = document.createElement('p');
+        author.textContent = `By ${article.author}`;
+
+        const date = document.createElement('p');
+        date.textContent = `Publication date: ${article.date}`;
+
+        const link = document.createElement('a');
+        link.href = article.link;
+        link.textContent = "Read more";
+        link.target = "_blank";
+
+        articleDiv.appendChild(title);
+        articleDiv.appendChild(description);
+        articleDiv.appendChild(author);
+        articleDiv.appendChild(date);
+        articleDiv.appendChild(link);
+
+        articlesContainer.appendChild(articleDiv);
+    });
+}
+
+// Call renderArticles to display articles on the page
+renderArticles();
+</script>
+
+<!-- Add some basic styling for the articles section -->
+<style>
+    #articles {
+        margin-top: 30px;
+    }
+
+    .article {
+        margin-bottom: 20px;
+    }
+
+    .article h3 {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+
+    .article p {
+        margin: 0 0 10px;
+    }
+
+    .article a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .article a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+
+<!-- Add some basic styling for the articles section -->
+<style>
+    #articles {
+        margin-top: 30px;
+    }
+
+    .article {
+        margin-bottom: 20px;
+    }
+
+    .article h3 {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+        color:aqua;
+    }
+
+    .article p {
+        margin: 0 0 10px;
+        color:#eef1f5;
+    }
+
+    .article a {
+        color: #eef1f5;
+        text-decoration: none;
+    }
+
+    .article a:hover {
+        text-decoration: underline;
+    }
+</style>
+
 
     <!-- Ask a Question Section -->
     <section id="ask-question">
