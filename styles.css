@@ -20,103 +20,87 @@ header h1 {
     font-size: 24px;
 }
 
-/* Button Styles */
 button {
     border: none;
-    padding: 10px 20px;
+    padding: 5px 5px;
     border-radius: 25px;
-    cursor: pointer;
     font-size: 16px;
-    font-weight: bold;
-    background-color: #007BFF; /* Default button color */
-    color: #fff; /* Default text color */
-    transition: background-color 0.3s ease; /* Transition for hover effect */
+   
 }
 
-button:hover {
+.btn-primary {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #007BFF; /* Slightly darker hover effect */
+}
+
+.btn-secondary {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.btn-secondary:hover {
     background-color: #0056b3; /* Slightly darker hover effect */
 }
 
-/* Input Styles */
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+
+input[type="submit"] {
+    background-color: var(--theme-color);
+    color: var(--text-color);
+    border: none;
+    padding: 5x 5x;
+    cursor: pointer;
 }
 
-/* Doctor Search Section Styles */
-.search-container {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+input[type="submit"]:hover {
+    background-color: var(--theme-color);
+    opacity: 0.8;
 }
 
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
+.navbar {
+    background-color: var(--theme-color);
+    color: var(--text-color);
 }
 
-/* Results Section */
-#results {
-    margin-top: 20px;
-    padding: 15px;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+a {
+    color: var(--theme-color);
+    text-decoration: none;
 }
 
-/* Add gap below the header */
-.personalization-controls {
-    margin-top: 20px; /* Adjust the value as needed */
-}
-
-/* Dark background for doctor search section */
-.doctor-search {
-    background-color: #333; /* Dark background color */
-    color: white;           /* Text color for better readability */
-    padding: 20px;         /* Add some padding */
-    border-radius: 8px;    /* Optional: for rounded corners */
-}
-
-/* Make fonts bolder */
-h2, h3, p, label {
-    font-weight: bold;     /* Apply bold font weight */
-}
-
-/* Ensure buttons have better visibility against dark background */
-button {
-    background-color: #007BFF; /* Button color */
-    color: white;              /* Button text color */
-    padding: 10px 15px;       /* Button padding */
-    border: none;             /* Remove default border */
-    border-radius: 5px;      /* Rounded corners for buttons */
-    cursor: pointer;          /* Pointer cursor for buttons */
-}
-
-/* Optional: Add hover effect for buttons */
-button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
-}
-
-#results {
-    margin-top: 20px; /* Space above the results */
-    padding: 10px;    /* Padding inside the results area */
-    background-color: #f0f0f0; /* Light background for contrast */
-    border-radius: 5px; /* Rounded corners */
-    display: block; /* Ensure it's displayed as a block element */
-    color: #333; /* Text color */
+a:hover {
+    text-decoration: underline;
 }
 
 
-/* Adjustments for specific buttons */
-.nav-items ul li a.button,
-.header-options .option-link.button {
+.upper-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center items vertically */
+    margin-bottom: 5px; /* Adjusted margin for spacing */
+    padding: 10px 20px; /* Add some padding */
+}
+
+.logo img {
+    width: 120px; /* Adjusted logo width */
+    height: auto;
+    padding-right: 20px; /* Space between logo and buttons */
+}
+
+.nav-items ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-items ul li {
+    margin-right: 20px;
+}
+
+.nav-items ul li a.button {
     padding: 10px 15px; /* Added padding for buttons */
     font-weight: bold; /* Bold text for buttons */
     color: white; /* Text color */
@@ -126,10 +110,30 @@ button:hover {
     transition: background-color 0.3s ease; /* Transition for hover effect */
 }
 
-.nav-items ul li a.button:hover,
+.nav-items ul li a.button:hover {
+    background-color: #007BFF; /* Darker background on hover */
+}
+
+.header-options {
+    display: flex;
+    align-items: center;
+}
+
+.header-options .option-link.button {
+    padding: 10px 15px; /* Added padding for buttons */
+    font-weight: bold; /* Bold text for buttons */
+    color: white; /* Text color */
+    background-color: #007bff; /* Button background color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+    margin-left: 10px; /* Spacing between buttons */
+}
+
 .header-options .option-link.button:hover {
     background-color: #0056b3; /* Darker background on hover */
 }
+
 
 /* Section Styling */
 section {
@@ -147,6 +151,80 @@ h2 {
     font-size: 2rem;
     color: #007bff;
     margin-bottom: 20px;
+}
+
+.personalization-controls {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    margin: 20px 0; /* Add some margin for spacing */
+}
+
+button {
+    background-color: #333; /* Dark background */
+    color: cyan; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 50px; /* Make buttons round */
+    padding: 10px 20px; /* Add padding for size */
+    font-weight: bold; /* Bold font */
+    font-size: 1em; /* Adjust font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #444; /* Slightly lighter on hover */
+}
+
+button:focus {
+    outline: none; /* Remove default focus outline */
+}
+
+.doctor-search {
+    background-color: #222; /* Darker background */
+    color: white; /* White text color for contrast */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 8px; /* Rounded corners */
+    margin: 20px 0; /* Add margin for spacing from other elements */
+}
+
+label {
+    font-weight: bold; /* Bold font for labels */
+    display: block; /* Block display to stack labels and inputs */
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+input[type="text"] {
+    width: 100%; /* Full width input */
+    padding: 10px; /* Add padding for comfort */
+    border: 1px solid #444; /* Dark border */
+    border-radius: 4px; /* Rounded corners for input */
+    margin-bottom: 15px; /* Space below each input */
+    background-color: #333; /* Darker input background */
+    color: white; /* White text in inputs */
+}
+
+button {
+    background-color: #333; /* Dark background for button */
+    color: cyan; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 50px; /* Make button round */
+    padding: 10px 20px; /* Padding for button size */
+    font-weight: bold; /* Bold font */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #444; /* Slightly lighter on hover */
+}
+
+#results {
+    border: 1px solid cyan; /* Cyan border for results */
+    margin-top: 15px; /* Space above results section */
+    padding: 10px; /* Padding inside results section */
+    background-color: #333; /* Dark background for results */
+    color: white; /* White text color in results */
+    border-radius: 4px; /* Rounded corners for results */
 }
 
 
@@ -221,7 +299,6 @@ footer {
         margin: 20px 0;
     }
 }
-
 
 /* Section Description Styling */
 .section-description {
@@ -324,19 +401,6 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Video Section Styling */
-.video-section {
-    display: inline-block;
-    margin: 20px;
-    text-align: center;
-    color: #ffffff; /* Ensures text below the video is white */
-}
-
-.video-section p {
-    font-size: 1.1rem; /* Increased font size for better readability */
-    color: #ffffff; /* White color for better visibility */
-    margin-top: 10px;
-}
 
 /* Login/Sign-up Section */
 .login-signup-section {
@@ -682,3 +746,94 @@ footer {
 }
 
 
+/* Section Styling */
+section {
+    padding: 40px;
+    margin: 20px 0;
+    background-color: #1f1f1f; /* Dark background for sections */
+    border-radius: 10px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Video Section Styling */
+.video-section {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    color: #ffffff; /* Ensures text below the video is white */
+}
+
+.video-section p {
+    font-size: 1.1rem; /* Increased font size for better readability */
+    color: #ffffff; /* White color for better visibility */
+    margin-top: 10px;
+}
+
+/* Login/Sign-up Section */
+.login-signup-section {
+    padding: 40px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    width: 45%;
+}
+
+form h3 {
+    color: #007BFF;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input[type="email"], 
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.form-separator {
+    width: 2px;
+    background-color: #ddd;
+    height: 100%;
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
