@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthEase - Doctor Appointment Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+<header>
+    <div class="upper-header">
+        <div class="logo">
+            <img src="Images/png/logo-no-background.png" alt="HealthEase Logo">
+        </div>
+        <div class="nav-items">
+            <ul>
+                <li><a href="#book" class="button">Book Appointment</a></li>
+                <div class="gap"></div>
+                <li><a href="#ask-question" class="button">Ask a Question</a></li>
+            </ul>
+        </div>
+        <div class="header-options">
+            <a href="#contact" class="option-link button">Contact Us</a>
+            <div class="gap"></div>
+            <a href="#login" class="option-link button">Login/Sign-up</a>
+        </div>
+    </div>
+    <div class="slogan">
+        <p class="blinking">Trusted Care for a Better You!</p>
+    </div>
+</header>
+  
+ <div class="personalization-controls">
+    <button id="increaseText">Increase Text Size</button>
+    <button id="decreaseText">Decrease Text Size</button>
+ </div>
+
+    <!-- Home Section with Two Videos -->
+<section id="home">
+    <h2>Your Health, Our Priority</h2>
+    <p class="home-description">Book an appointment with trusted doctors in your area.</p>
+
+    <!-- Video 1 -->
+    <div class="video-section">
+        <video width="300" controls>
+            <source src="Videos/1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>Introduction to our clinic and services.</p>
+    </div>
+
+    <!-- Video 2 -->
+    <div class="video-section">
+        <video width="300" controls>
+            <source src="Videos/2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>Hear from our doctors about patient care.</p>
+    </div>
+
+    <!-- New Video Section -->
+    <div class="video-section">
+        <video width="300" controls>
+            <source src="Videos/3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>See what our patients say about us.</p>
+    </div>
+</section>
+
+<!-- Add the doctor search section here -->
+<div class="doctor-search">
+    <label for="city">Enter City:</label>
+    <input type="text" id="city" placeholder="e.g., London" />
+
+    <label for="doctor">Enter Doctor's Name:</label>
+    <input type="text" id="doctor" placeholder="e.g., Jane Doe" />
+
+    <button id="searchButton">Search</button>
+
+    <div id="results"></div>
+</div>
+
+   <!-- Doctor Specialization and Location Recommendation -->
+<section id="doctors">
+    <h2>Doctor Specializations & Locations</h2>
+    <p class="section-description">Choose your doctor based on your needs:</p>
+
+    <div class="doctor-profiles-container">
+        <div class="doctor-profile">
+            <img src="Images/doc1.PNG" alt="Doctor 1">
+            <h3>Dr. Jane Doe</h3>
+            <p>Specialty: Cardiology</p>
+            <p>Location: London</p>
+        </div>
+
+        <div class="doctor-profile">
+            <img src="Images/doc2.PNG" alt="Doctor 2">
+            <h3>Dr. John Smith</h3>
+            <p>Specialty: Dermatology</p>
+            <p>Location: Manchester</p>
+        </div>
+
+        <div class="doctor-profile">
+            <img src="Images/doc3.PNG" alt="Doctor 3">
+            <h3>Dr. Emma Brown</h3>
+            <p>Specialty: Pediatrics</p>
+            <p>Location: Birmingham</p>
+        </div>
+
+        <div class="doctor-profile">
+            <img src="Images/doc4.PNG" alt="Doctor 4">
+            <h3>Dr. Michael Lee</h3>
+            <p>Specialty: Neurology</p>
+            <p>Location: Liverpool</p>
+        </div>
+
+        <div class="doctor-profile">
+            <img src="Images/doc5.PNG" alt="Doctor 5">
+            <h3>Dr. Sarah Johnson</h3>
+            <p>Specialty: General Practice</p>
+            <p>Location: Leeds</p>
+        </div>
+
+        <div class="doctor-profile">
+            <img src="Images/doc6.PNG" alt="Doctor 6">
+            <h3>Dr. Alex Martinez</h3>
+            <p>Specialty: Orthopedics</p>
+            <p>Location: Bristol</p>
+        </div>
+    </div>
+</section>
+
+
+
+   <!-- Booking Information Section -->
+<section id="book">
+    <h2>Book an Appointment</h2>
+    <form id="bookingForm" onsubmit="return submitBooking(event)">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="location">Select Location:</label>
+        <select id="location" name="location" required>
+            <option value="london">London</option>
+            <option value="manchester">Manchester</option>
+            <option value="birmingham">Birmingham</option>
+            <option value="bristol">Bristol</option>
+            <option value="leeds">Leeds</option>
+        </select>
+
+        <label for="doctorSelect">Choose Doctor:</label>
+        <select id="doctorSelect" name="doctor" required>
+            <option value="dr-jane-doe">Dr. Jane Doe (Cardiology)</option>
+            <option value="dr-john-smith">Dr. John Smith (Dermatology)</option>
+            <option value="dr-emma-brown">Dr. Emma Brown (Pediatrics)</option>
+            <option value="dr-alex-white">Dr. Alex White (Orthopedics)</option>
+            <option value="dr-lisa-green">Dr. Lisa Green (General Practitioner)</option>
+            <option value="dr-mark-blue">Dr. Mark Blue (Neurology)</option>
+        </select>
+
+        <label for="date">Select Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Select Time:</label>
+        <input type="time" id="time" name="time" required>
+
+        <input type="submit" value="Book Appointment">
+    </form>
+</section>
+
+    <!-- Ask a Question Section -->
+    <section id="ask-question">
+        <h2>Ask a Question</h2>
+        <form id="questionForm" onsubmit="return submitQuestion(event)">
+            <label for="questionName">Your Name:</label>
+            <input type="text" id="questionName" name="questionName" required>
+
+            <label for="question">Your Question:</label>
+            <textarea id="question" name="question" rows="4" required></textarea>
+
+            <input type="submit" value="Submit Question">
+        </form>
+    </section>
+
+    <!-- Login/Sign-up Section -->
+ <section id="login" class="login-signup-section">
+    <h2>Login/Sign-up</h2>
+    
+    <!-- Login Form -->
+    <div class="form-container">
+        <form id="loginForm" onsubmit="return handleLogin(event)">
+            <h3>Login</h3>
+            <label for="loginEmail">Email:</label>
+            <input type="email" id="loginEmail" name="loginEmail" required>
+
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" name="loginPassword" required>
+
+            <input type="submit" value="Login">
+        </form>
+        
+        <div class="form-separator"></div>
+
+        <!-- Sign-up Form -->
+        <form id="signupForm" onsubmit="return handleSignup(event)">
+            <h3>Sign-up</h3>
+            <label for="signupEmail">Email:</label>
+            <input type="email" id="signupEmail" name="signupEmail" required>
+
+            <label for="signupPassword">Password:</label>
+            <input type="password" id="signupPassword" name="signupPassword" required>
+
+            <label for="signupConfirmPassword">Confirm Password:</label>
+            <input type="password" id="signupConfirmPassword" name="signupConfirmPassword" required>
+
+            <input type="submit" value="Sign-up">
+        </form>
+    </div>
+ </section>
+
+
+    <!-- Contact Us Section -->
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p class="contact-info">We’re here to help! If you have any questions or need assistance, feel free to reach out to us.</p>
+    
+    <p class="contact-info">Email: <a href="mailto:contact@healthease.com">contact@healthease.com</a></p>
+    <p class="contact-info">Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+    <p class="contact-info">Location: 123 HealthEase St, London, UK</p>
+    
+    <p class="contact-info">Our customer service team is available from 9 AM to 6 PM (GMT) to assist you with your inquiries.</p>
+    <p class="contact-info">You can also reach us through our social media platforms:</p>
+    <ul class="social-media">
+        <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+        <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+        <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+    </ul>
+</section>
+
+<!-- About Us Section -->
+<section id="about">
+    <h2>About HealthEase</h2>
+    <p class="about-info">At HealthEase, we strive to connect patients with the best healthcare providers in their area. Our mission is to simplify the medical appointment booking process, making it accessible and convenient for everyone.</p>
+
+    <p class="about-info">We offer a wide range of healthcare specialists, including cardiologists, dermatologists, pediatricians, Neurology, Orthopedics and more, ensuring you find the right doctor for your needs. Our platform is designed to provide you with a seamless experience from searching for a doctor to booking your appointment.</p>
+
+    <p class="about-info">At HealthEase, patient care is our priority. Our team is committed to providing support throughout your healthcare journey, from providing information about our doctors to helping you navigate your appointments.</p>
+
+    <p class="about-info">Join our community and experience the ease of healthcare with HealthEase!</p>
+</section>
+
+
+
+
+    <footer>
+        <p>&copy; 2024 HealthEase</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

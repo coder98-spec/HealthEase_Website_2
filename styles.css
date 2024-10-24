@@ -1,0 +1,799 @@
+/* General Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Updated header styling */
+header {
+    background-color: #333; /* Darker background color */
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: #fff; /* Adjust the text color for better contrast */
+    font-size: 24px;
+}
+
+/* Button Styles */
+button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #007BFF; /* Default button color */
+    color: #fff; /* Default text color */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+button:hover {
+    background-color: #0056b3; /* Slightly darker hover effect */
+}
+
+/* Input Styles */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Doctor Search Section Styles */
+.search-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Results Section */
+#results {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Slogan Styling */
+.slogan {
+    text-align: center; /* Center the slogan */
+    margin: 5px 0; /* Spacing above and below */
+}
+
+.blinking {
+    font-size: 1.2rem; /* Font size for the slogan */
+    color: #007bff; /* Slogan color */
+    animation: blink-animation 1.5s steps(5, end) infinite; /* Blinking effect */
+}
+
+/* Blinking Animation */
+@keyframes blink-animation {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Add gap below the header */
+.personalization-controls {
+    margin-top: 20px; /* Adjust the value as needed */
+}
+
+/* Dark background for doctor search section */
+.doctor-search {
+    background-color: #333; /* Dark background color */
+    color: white;           /* Text color for better readability */
+    padding: 20px;         /* Add some padding */
+    border-radius: 8px;    /* Optional: for rounded corners */
+}
+
+/* Make fonts bolder */
+h2, h3, p, label {
+    font-weight: bold;     /* Apply bold font weight */
+}
+
+/* Ensure buttons have better visibility against dark background */
+button {
+    background-color: #007BFF; /* Button color */
+    color: white;              /* Button text color */
+    padding: 10px 15px;       /* Button padding */
+    border: none;             /* Remove default border */
+    border-radius: 5px;      /* Rounded corners for buttons */
+    cursor: pointer;          /* Pointer cursor for buttons */
+}
+
+/* Optional: Add hover effect for buttons */
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+#results {
+    margin-top: 20px; /* Space above the results */
+    padding: 10px;    /* Padding inside the results area */
+    background-color: #f0f0f0; /* Light background for contrast */
+    border-radius: 5px; /* Rounded corners */
+    display: block; /* Ensure it's displayed as a block element */
+    color: #333; /* Text color */
+}
+
+
+
+/* Adjustments for specific buttons */
+.nav-items ul li a.button,
+.header-options .option-link.button {
+    padding: 10px 15px; /* Added padding for buttons */
+    font-weight: bold; /* Bold text for buttons */
+    color: white; /* Text color */
+    background-color: #007BFF; /* Button background color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.nav-items ul li a.button:hover,
+.header-options .option-link.button:hover {
+    background-color: #0056b3; /* Darker background on hover */
+}
+
+
+/* Section Styling */
+section {
+    padding: 40px;
+    margin: 20px 0;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+
+
+/* Booking Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: auto;
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+form input, form select {
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    border-top: 2px solid #007bff;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .doctor-profile {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+
+/* Section Description Styling */
+.section-description {
+    font-size: 1.2rem;
+    color: #007bff; /* Blue color for visibility */
+    margin-bottom: 20px; /* Adds space below the description */
+    text-align: center; /* Center-aligns the text */
+}
+
+/* Doctor Profiles Container */
+.doctor-profiles-container {
+    display: flex;
+    justify-content: space-around; /* Aligns profiles evenly */
+    flex-wrap: wrap; /* Allows wrapping of items on smaller screens */
+    margin-top: 20px; /* Adds spacing above the profiles */
+}
+
+/* Individual Doctor Profile Styling */
+.doctor-profile {
+    background-color: #ffffff; /* White background for profiles */
+    border-radius: 10px;
+    padding: 20px; /* Increased padding for better spacing */
+    margin: 10px; /* Spacing between profiles */
+    flex: 1 1 30%; /* Allows flexibility in size */
+    max-width: 300px; /* Fixed width for profiles */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+    text-align: center; /* Center-aligns text */
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.doctor-profile:hover {
+    transform: scale(1.05); /* Slightly enlarges profile on hover */
+}
+
+/* Doctor Profile Text */
+.doctor-profile h3 {
+    font-size: 1.5rem; /* Larger font for names */
+    color: #333; /* Dark color for better visibility */
+    margin: 10px 0; /* Adds spacing above and below */
+}
+
+.doctor-profile p {
+    color: #555; /* Medium gray for descriptions */
+    margin: 5px 0; /* Adds spacing */
+}
+
+/* Doctor Profile Image */
+.doctor-profile img {
+    width: 100px; /* Fixed size for consistency */
+    height: auto;
+    border-radius: 50%; /* Circular images */
+    margin-bottom: 10px; /* Spacing below images */
+}
+
+/* Home Description Styling */
+.home-description {
+    font-size: 1.2rem;
+    color: #ffffff; /* White color for better contrast */
+    margin-bottom: 20px; /* Adds space below the description */
+    text-align: center; /* Center-aligns the text */
+}
+
+/* Contact and About Info Styling */
+.contact-info, .about-info {
+    font-size: 1rem; /* Ensure the font size is readable */
+    color: #ffffff; /* White color for better visibility */
+    margin: 10px 0; /* Adds spacing between lines */
+}
+
+/* Social Media Links Styling */
+.social-media {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+}
+
+.social-media li {
+    display: inline; /* Display links in a row */
+    margin-right: 15px; /* Spacing between links */
+}
+
+.social-media a {
+    color: #007bff; /* Blue color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.social-media a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+
+/* Section Styling */
+section {
+    padding: 40px;
+    margin: 20px 0;
+    background-color: #1f1f1f; /* Dark background for sections */
+    border-radius: 10px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Video Section Styling */
+.video-section {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    color: #ffffff; /* Ensures text below the video is white */
+}
+
+.video-section p {
+    font-size: 1.1rem; /* Increased font size for better readability */
+    color: #ffffff; /* White color for better visibility */
+    margin-top: 10px;
+}
+
+/* Login/Sign-up Section */
+.login-signup-section {
+    padding: 40px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    width: 45%;
+}
+
+form h3 {
+    color: #007BFF;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input[type="email"], 
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.form-separator {
+    width: 2px;
+    background-color: #ddd;
+    height: 100%;
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+
+
+.btn-secondary {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #0056b3; /* Slightly darker hover effect */
+}
+
+
+.upper-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center items vertically */
+    margin-bottom: 5px; /* Adjusted margin for spacing */
+    padding: 10px 20px; /* Add some padding */
+}
+
+.logo img {
+    width: 120px; /* Adjusted logo width */
+    height: auto;
+    padding-right: 20px; /* Space between logo and buttons */
+}
+
+.nav-items ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-items ul li {
+    margin-right: 20px;
+}
+
+.nav-items ul li a.button {
+    padding: 10px 15px; /* Added padding for buttons */
+    font-weight: bold; /* Bold text for buttons */
+    color: white; /* Text color */
+    background-color: #007BFF; /* Button background color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.nav-items ul li a.button:hover {
+    background-color: #007BFF; /* Darker background on hover */
+}
+
+.header-options {
+    display: flex;
+    align-items: center;
+}
+
+.header-options .option-link.button {
+    padding: 10px 15px; /* Added padding for buttons */
+    font-weight: bold; /* Bold text for buttons */
+    color: white; /* Text color */
+    background-color: #007bff; /* Button background color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+    margin-left: 10px; /* Spacing between buttons */
+}
+
+.header-options .option-link.button:hover {
+    background-color: #0056b3; /* Darker background on hover */
+}
+
+/* Slogan Styling */
+.slogan {
+    text-align: center; /* Center the slogan */
+    margin: 5px 0; /* Spacing above and below */
+}
+
+.blinking {
+    font-size: 1.2rem; /* Font size for the slogan */
+    color: #007bff; /* Slogan color */
+    animation: blink-animation 1.5s steps(5, end) infinite; /* Blinking effect */
+}
+
+/* Blinking Animation */
+@keyframes blink-animation {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+
+}
+
+
+
+
+/* Section Styling */
+section {
+    padding: 40px;
+    margin: 20px 0;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+
+
+/* Booking Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: auto;
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+form input, form select {
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    border-top: 2px solid #007bff;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .doctor-profile {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+
+/* Section Description Styling */
+.section-description {
+    font-size: 1.2rem;
+    color: #007bff; /* Blue color for visibility */
+    margin-bottom: 20px; /* Adds space below the description */
+    text-align: center; /* Center-aligns the text */
+}
+
+/* Doctor Profiles Container */
+.doctor-profiles-container {
+    display: flex;
+    justify-content: space-around; /* Aligns profiles evenly */
+    flex-wrap: wrap; /* Allows wrapping of items on smaller screens */
+    margin-top: 20px; /* Adds spacing above the profiles */
+}
+
+/* Individual Doctor Profile Styling */
+.doctor-profile {
+    background-color: #ffffff; /* White background for profiles */
+    border-radius: 10px;
+    padding: 20px; /* Increased padding for better spacing */
+    margin: 10px; /* Spacing between profiles */
+    flex: 1 1 30%; /* Allows flexibility in size */
+    max-width: 300px; /* Fixed width for profiles */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+    text-align: center; /* Center-aligns text */
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.doctor-profile:hover {
+    transform: scale(1.05); /* Slightly enlarges profile on hover */
+}
+
+/* Doctor Profile Text */
+.doctor-profile h3 {
+    font-size: 1.5rem; /* Larger font for names */
+    color: #333; /* Dark color for better visibility */
+    margin: 10px 0; /* Adds spacing above and below */
+}
+
+.doctor-profile p {
+    color: #555; /* Medium gray for descriptions */
+    margin: 5px 0; /* Adds spacing */
+}
+
+/* Doctor Profile Image */
+.doctor-profile img {
+    width: 100px; /* Fixed size for consistency */
+    height: auto;
+    border-radius: 50%; /* Circular images */
+    margin-bottom: 10px; /* Spacing below images */
+}
+
+/* Home Description Styling */
+.home-description {
+    font-size: 1.2rem;
+    color: #ffffff; /* White color for better contrast */
+    margin-bottom: 20px; /* Adds space below the description */
+    text-align: center; /* Center-aligns the text */
+}
+
+/* Contact and About Info Styling */
+.contact-info, .about-info {
+    font-size: 1rem; /* Ensure the font size is readable */
+    color: #ffffff; /* White color for better visibility */
+    margin: 10px 0; /* Adds spacing between lines */
+}
+
+/* Social Media Links Styling */
+.social-media {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+}
+
+.social-media li {
+    display: inline; /* Display links in a row */
+    margin-right: 15px; /* Spacing between links */
+}
+
+.social-media a {
+    color: #007bff; /* Blue color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.social-media a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+
+/* Section Styling */
+section {
+    padding: 40px;
+    margin: 20px 0;
+    background-color: #1f1f1f; /* Dark background for sections */
+    border-radius: 10px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Video Section Styling */
+.video-section {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    color: #ffffff; /* Ensures text below the video is white */
+}
+
+.video-section p {
+    font-size: 1.1rem; /* Increased font size for better readability */
+    color: #ffffff; /* White color for better visibility */
+    margin-top: 10px;
+}
+
+/* Login/Sign-up Section */
+.login-signup-section {
+    padding: 40px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    width: 45%;
+}
+
+form h3 {
+    color: #007BFF;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input[type="email"], 
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.form-separator {
+    width: 2px;
+    background-color: #ddd;
+    height: 100%;
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
