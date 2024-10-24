@@ -24,18 +24,18 @@ function getContrastYIQ(hexcolor){
     var yiq = ((r*299)+(g*587)+(b*114))/1000;
     return (yiq >= 128) ? 'black' : 'white'; // Returns white for dark colors and black for light colors
 }
+
 // Doctor search section
 const doctors = [
-    { name: "Dr. Jane Doe", specialty: "Cardiology", contact: "123-456-7890" },
-    { name: "Dr. John Smith", specialty: "Dermatology", contact: "987-654-3210" },
-    { name: "Dr. Emma Brown", specialty: "Pediatrics", contact: "955-345-4555" },
-    { name: "Dr. Michael Lee", specialty: "Neurology", contact: "565-895-5345" },
-    { name: "Dr. Emma Brown", specialty: "General Practice", contact: "375-595-6355" },
-    { name: "Dr. Emma Brown", specialty: "Orthopedics", contact: "785-855-2155" },
-    
+    { name: "Dr. Jane Doe", specialty: "Cardiology", contact: "123-456-7890", city: "london" },
+    { name: "Dr. John Smith", specialty: "Dermatology", contact: "987-654-3210", city: "manchester" },
+    { name: "Dr. Emma Brown", specialty: "Pediatrics", contact: "955-345-4555", city: "birmingham" },
+    { name: "Dr. Michael Lee", specialty: "Neurology", contact: "565-895-5345", city: "liverpool" },
+    { name: "Dr. Sarah Johnson", specialty: "General Practice", contact: "375-595-6355", city: "leeds" },
+    { name: "Dr. Alex Martinez", specialty: "Orthopedics", contact: "785-855-2155", city: "bristol" },
 ];
 
-const cities = ["london", "manchester", "birmingham", "Liverpool", "Leeds", "bristol" ];
+const cities = ["london", "manchester", "birmingham", "liverpool", "leeds", "bristol"];
 
 function searchDoctor() {
     const cityInput = document.getElementById('city').value.toLowerCase().trim();
@@ -43,13 +43,21 @@ function searchDoctor() {
     const resultsContainer = document.getElementById('results');
     resultsContainer.innerHTML = ''; // Clear previous results
 
-    // Check if the city is valid and if the doctor exists in the list
-    const foundDoctor = doctors.find(doc => doc.name.toLowerCase().includes(doctorInput));
-    
-    if (cities.includes(cityInput) && foundDoctor) {
-        resultsContainer.innerHTML = `Found ${foundDoctor.name} in ${cityInput}.<br>
-            Specialty: ${foundDoctor.specialty}<br>
-            Contact: ${foundDoctor.contact}`;
+    // Check if the city is valid
+    const isCityValid = cities.includes(cityInput);
+
+    // Check if any doctor exists in the list
+    const foundDoctors = doctors.filter(doc => {
+        const matchesDoctorName = doc.name.toLowerCase().includes(doctorInput);
+        const matchesCity = cityInput === '' || doc.city === cityInput; // Allow city to be ignored if empty
+        return matchesDoctorName && matchesCity;
+    });
+
+    // Construct results based on matches
+    if (foundDoctors.length > 0) {
+        resultsContainer.innerHTML = `Found ${foundDoctors.map(doc => doc.name).join(", ")}.<br>
+            Specialty: ${foundDoctors.map(doc => doc.specialty).join(", ")}<br>
+            Contact: ${foundDoctors.map(doc => doc.contact).join(", ")}`;
     } else {
         resultsContainer.innerHTML = "No results found. Please check the doctor or city name.";
     }
@@ -57,6 +65,7 @@ function searchDoctor() {
 
 // Event listener for the search button
 document.getElementById('searchButton').addEventListener('click', searchDoctor);
+
 
 
 // Submit Booking Form
